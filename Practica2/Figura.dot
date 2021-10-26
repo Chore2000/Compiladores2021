@@ -1,0 +1,13 @@
+digraph Figura {
+    node [shape = circle]
+    q9 [shape = doublecircle]
+    q0 -> {q1 q3} [label = E]
+    q1 -> q2 [label = 0]
+    q2 -> q5 [label = E]
+    q5 -> q6 [label = E]
+    q6 -> q7 [label = 0]
+    q7 -> q8 [label = E]
+    q8 -> q9 [label = 1]
+    q3 -> q4 [label = 1]
+    q4 -> q5 [label = E]
+} 
