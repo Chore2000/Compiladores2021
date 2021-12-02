@@ -60,17 +60,33 @@ int main()
                     int num = stoi(aux);
                 }
             }
-
-            /*for(int k=0; k<trans[i][simb].length(); k++)
-            {
-                
-            }*/
-
             cin.ignore();
             simb++;
         }
 
         simb = 0;
+    }
+
+    cout << endl << "Tabla de transiciones: " << endl;
+    cout << "Estado / ";
+    
+    for(int i = 0; i < epsilon.length(); i+=2)
+    {
+        cout << epsilon[i] << " | ";
+    }
+    cout << endl;
+
+    for(int i = 0; i < estados; i++)
+    {
+        int simb = 0;
+        cout << "q" << est[i].getNum() << " |    ";
+
+        for(int j = 0; j < epsilon.length(); j+=2)
+        {
+            cout << trans[i][simb] << "    ";
+            simb++;
+        }
+        cout << endl;
     }
 
     cout << "Presiona ENTER para continuar...";
