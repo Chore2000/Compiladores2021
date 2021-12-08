@@ -1,12 +1,8 @@
 #Makefile para compilar la Practica 2.
 #Estrada Escobedo Juan Ramón
 
-prueba: main.o
-	g++ -std=c++17 -pedantic-errors -Wall -o prueba.exe main.o
+prueba: *.cpp
+	g++ -std=c++17 -pedantic-errors -Wall -o prueba.exe *.o
 
-main.o: main.cpp
-	g++ -c main.cpp
-
-#Borrar todos los archivos .o
-clear:
-	rm -f *.o
+grafo: Figura.dot
+	DOT -Tjpg -O Figura.dot
